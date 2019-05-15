@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Welcome to the {{ title }}</h1>
+  <h3>{{ totalAttendance }} Nashvillians are participating in our events! </h3><h3>Join Us and Sign up!</h3>
+  <h2>There are {{   getNumberOfEvents() }} Upcoming Events:</h2>
+
+<app-event *ngFor='let eventObject of eventList'
+[event]="eventObject"
+[baseUrl]="eventUrl"
+(attendanceEvent)="handleAttendance($event)"></app-event>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<app-newphoto ></app-newphoto>
+</div>

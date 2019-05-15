@@ -1,0 +1,18 @@
+<div class="card-body">
+  <div class="row">
+    <div class="card-deck col-md-4">
+      <div class="card bg-light">
+          <div class="card-body">
+          <a routerLink="/event/{{event._id}}">  <img class="card-img-top" src="{{ event.displayurl }}" style="max-width:250px; margin: auto;">
+            <strong class="card-title">{{ event.title }}</strong></a>
+            <p class="card-text">{{ event.date }}</p>
+            <p class="card-text">{{ event.time }}</p>
+            <button (click)="numberGoing(title)">Going ({{ going }})</button>
+            <button (click)="numberMaybe(title)">Maybe ({{ maybe }})</button>
+            <button (click)="numberNotGoing(title)">Not Going ({{ notGoing }})</button>
+          </div>
+
+      </div>
+    </div>
+  </div>
+  </div>

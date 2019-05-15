@@ -1,0 +1,28 @@
+
+<div *ngIf="event">
+  <div>
+    <h3> {{ event.title }} Details:</h3>
+    <div><img src="{{ eventdisplayurl }}"></div>
+    <div><span>Title: </span> {{ event.title }}</div>
+    <div><span>Date: </span>{{ event.date }}</div>
+    <div><span>Time: </span>{{ event.time }}</div>
+
+    <a class="btn btn-link" href="/#/">back to events</a>
+    <button type="button" (click)="deleteEvent()">delete</button>
+  </div>
+  <div>
+    <form #form="ngForm" (ngSubmit)="updateEvent(form.value)">
+      <div class="form-group">
+        <label for="titleField">Title:</label>
+        <input #title name="titleField" class="form-control" [ngModel]="event.title">
+        <br />
+        <label for="dateInput">Date:</label>
+        <input name="dateInput" class="form-control" [ngModel]="event.date">
+        <br />
+        <label for="timeInput">Time:</label>
+        <input name="timeInput" class="form-control" [ngModel]="event.time">
+      </div>
+      <button type="submit">save</button>
+    </form>
+  </div>
+</div>

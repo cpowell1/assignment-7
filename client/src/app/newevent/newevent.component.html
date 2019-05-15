@@ -1,0 +1,25 @@
+<div>
+  <h3>Create an Event</h3>
+  <form #neweventForm="ngForm" (ngSubmit)="save(neweventForm)">
+    <div>
+        <label>Name:
+          <input required  placeholder="title" name="title" class="form-control" [(ngModel)]="event.title">
+        </label>
+
+
+        <br/>
+        <label>Date:
+          <input placeholder="date" name="date" class="form-control" [(ngModel)]="event.date">
+        </label>
+        <br/>
+        <label>Date:
+          <input placeholder="time" name="time" class="form-control" [(ngModel)]="event.time">
+        </label>
+        <br/>
+        <label>Select a File:
+          <input type="file" name="file" (change)="handleFileInput($event.target)">
+        </label>
+    </div>
+    <button type="submit">save</button>
+  </form>
+</div>

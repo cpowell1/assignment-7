@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h4 Nashville Events
+
+  .row
+    each event in events
+     .col-sm-4
+       img(src=event.imageurl, width="200")
+       p Event Name:  #{event.eventName}
+       p Date: #{event.date}
+       p Time: #{event.time}
+       a(href='/events/'+event._id) Read More
+       
+  include eventform

@@ -1,0 +1,59 @@
+.container {
+  text-align: center;
+  font-family: 'Oswald';
+}
+
+h1, h2 {
+  padding: 20px 0;
+}
+.col-md-4 {
+  border: 1px solid #e3e3e3;
+  min-height: 250px;
+  padding-top: 10px;
+}
+
+ul {
+  list-style-type: none;
+  margin: auto;
+  display: block;
+  background: #404040;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul li {
+  margin-right: 15px;
+  margin-bottom: 25px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:hover {
+  color: #77cfe7;
+  text-decoration: none;
+}
+
+form {
+  border: 3px solid #e3e3e3;
+  width: 400px;
+  margin: auto;
+  padding: 15px;
+}
+
+label, input {
+  display: block;
+  margin: auto;
+  font-size: 19px;
+  margin-bottom: 10px;
+}
+
+.submit {
+  width: 50%;
+  padding: 10px;
+  margin-top: 25px;
+}

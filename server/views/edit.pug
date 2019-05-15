@@ -1,0 +1,22 @@
+.row
+   .col-md-6.col-md-offset-3
+      img(src=event.imageurl, width="250")
+      p Event: #{event.eventName} 
+      p Date: #{event.date}
+      p Time: #{event.time}
+      p Edit Event
+      form(method='POST' action="/events/"+event._id)
+        div.form-group
+          label(for='name') Event Name:
+          input#name.form-control(type='text', value=event.eventName name='eventName')
+        div.form-group
+          label(for='date') Event Date:
+          input#date.form-control(type='text', value=event.date name='date')
+        div.form-group
+          label(for='time') Event Time:
+          input#time.form-control(type='text', value=event.time name='time')
+        div.form-group
+          input#name.form-control(type='hidden', name='_id' value=event._id)
+        button.btn.btn-primary(type='submit') Save Changes
+      form(method='POST' action="/events/"+event._id+"/delete")  
+        button.btn.btn-primary(type='submit') Delete Event

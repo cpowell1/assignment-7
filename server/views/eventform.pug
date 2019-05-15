@@ -1,0 +1,18 @@
+h2 Share a New Event
+
+.row
+   .col-md-6.col-md-offset-3
+    form(method='POST' action="/events" enctype="multipart/form-data")
+      div.form-group
+        label(for='name') Event Name:
+        input#name.form-control(type='text', placeholder='Event Name' name='eventName')
+      div.form-group
+        label(for='date') Event Date:
+        input#date.form-control(type='text', placeholder='Event Date' name='date')
+      div.form-group
+        label(for='time') Event Time:
+        input#time.form-control(type='text', placeholder='Event Time' name='time')
+      div.form-group
+        label(for='image') Image:
+        input#image.form-control(type='file', name='image')
+      button.btn.btn-primary(type='submit') Add Your Event
